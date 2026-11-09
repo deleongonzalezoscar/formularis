@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari d'inscripció</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            margin: 20px;
+        }
+
+        form {
+            background-color: white;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+
+        fieldset {
+            border: 1px solid white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 10px;
+        }
+
+        input[type="color"] {
+            width: 100%;
+            height: 40px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        textarea {
+            height: 60px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .enviar {
+            background-color: black;
+            color: white;
+            width: 85%;
+        }
+
+        .netejar {
+            background-color: white;
+        }
+
+        .centre {
+            text-align: center;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+
+    <h2>Formulari d'inscripció</h2>
+    <p class="centre">Activitats extraescolars · Curs 2026–2027</p>
+
+    <fieldset>
+
+        <h3>1. Dades personals</h3>
+
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom"
+        placeholder="Escriu el teu nom" required>
+
+        <label for="cognoms">Cognoms *</label>
+        <input type="text" id="cognoms" name="cognoms"
+        placeholder="Escriu els cognoms" required>
+
+        <label for="correu">Correu electrònic *</label>
+        <input type="email" id="correu" name="correu"
+        placeholder="exemple@correu.com" required>
+
+        <label for="telefon">Telèfon</label>
+        <input type="tel" id="telefon"  min="9" max="9" name="telefon"
+        placeholder="Ej: 687 45 76 09">
+
+        <label for="data">Data de naixement *</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="contrasenya">Contrasenya *</label>
+        <input type="password" id="contrasenya"
+        name="contrasenya"
+        placeholder="Introdueix una contrasenya" required>
+
+    </fieldset>
+
+    <fieldset>
+
+        <h3>2. Informació acadèmica</h3>
+
+        <label for="curs">Curs actual *</label>
+
+        <select id="curs" name="curs" required>
+            <option value="">Selecciona un curs</option>
+            <option value="I3">I3</option>
+            <option value="I4">I4</option>
+            <option value="I5">I5</option>
+            <option value="1r Primària">1r de Primària</option>
+            <option value="2n Primària">2n de Primària</option>
+            <option value="3r Primària">3r de Primària</option>
+            <option value="4t Primària">4t de Primària</option>
+            <option value="5è Primària">5è de Primària</option>
+            <option value="6è Primària">6è de Primària</option>
+            <option value="1r ESO">1r d'ESO</option>
+            <option value="2n ESO">2n d'ESO</option>
+            <option value="3r ESO">3r d'ESO</option>
+            <option value="4t ESO">4t d'ESO</option>
+            <option value="Batxillerat">Batxillerat</option>
+        </select>
+
+        <p>Activitat que vols realitzar *</p>
+
+        <input type="radio" id="programacio"
+        name="activitat" value="Programació" required>
+        <label for="programacio">Programació</label>
+
+        <input type="radio" id="robotica"
+        name="activitat" value="Robòtica">
+        <label for="robotica">Robòtica</label>
+
+        <input type="radio" id="disseny"
+        name="activitat" value="Disseny web">
+        <label for="disseny">Disseny web</label>
+
+        <input type="radio" id="esports"
+        name="activitat" value="Esports">
+        <label for="esports">Esports</label>
+
+        <p>Dies disponibles</p>
+
+        <input type="checkbox" id="dilluns"
+        name="dies" value="Dilluns">
+        <label for="dilluns">Dilluns</label>
+
+        <input type="checkbox" id="dimarts"
+        name="dies" value="Dimarts">
+        <label for="dimarts">Dimarts</label>
+
+        <input type="checkbox" id="dimecres"
+        name="dies" value="Dimecres">
+        <label for="dimecres">Dimecres</label>
+
+        <input type="checkbox" id="dijous"
+        name="dies" value="Dijous">
+        <label for="dijous">Dijous</label>
+
+        <input type="checkbox" id="divendres"
+        name="dies" value="Divendres">
+        <label for="divendres">Divendres</label>
+
+    </fieldset>
+
+    <fieldset>
+
+        <h3>3. Informació addicional</h3>
+
+        <label for="color">
+            Color preferit per a la teva identificació
+        </label>
+
+        <input type="color" id="color" name="color"
+        value="#4285db">
+
+        <label for="nivell">
+            Nivell d'experiència (de 0 a 10)
+        </label>
+
+        <input type="range" id="nivell" name="nivell"
+        min="0" max="10" value="5">
+
+        <label for="comentaris">
+            Comentaris o observacions
+        </label>
+
+        <textarea id="comentaris" name="comentaris"
+        placeholder="Escriu aquí els teus comentaris..."></textarea>
+
+        <label for="document">
+            Adjunta un document (opcional)
+        </label>
+
+        <input type="file" id="document" name="document">
+
+        <p>Camp HTML de tipus file</p>
+
+    </fieldset>
+
+    <input type="checkbox" id="privacitat"
+    name="privacitat" required>
+
+    <label for="privacitat">
+        Accepto la política de privacitat i les condicions
+        d'inscripció. *
+    </label>
+
+    <br><br>
+
+    <div class="centre">
+
+        <button type="submit" class="enviar">
+            Enviar inscripció
+        </button>
+
+        <button type="reset" class="netejar">
+            Netejar
+        </button>
+
+    </div>
+
+    <p class="centre">* Camps obligatoris</p>
+
+</form>
+
+</body>
+</html>
